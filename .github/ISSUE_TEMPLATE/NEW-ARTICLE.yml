@@ -1,0 +1,109 @@
+name: New Article
+description: Submit a new article to ProstDev
+title: "[POST]: "
+# labels: ["bug", "triage"]
+assignees:
+  - alexandramartinez
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sending us your article for ProstDev!
+        Please make sure to read our [guidelines](https://www.prostdev.com/post/guidelines-to-submit-your-content-in-prostdev) before submitting your article. If your article doesn't meet the requirements, it will be rejected.
+  - type: input
+    id: contact-email
+    attributes:
+      label: Your email
+      description: Please add your email in case we need to contact you.
+      placeholder: email@example.com
+    validations:
+      required: true
+  - type: input
+    id: contact-name
+    attributes:
+      label: Your name
+      description: This is how your name will appear on the article.
+      placeholder: Alex Martinez
+    validations:
+      required: true
+  - type: input
+    id: contact-linkedin
+    attributes:
+      label: LinkedIn profile
+      description: Please provide your LinkedIn profile link.
+      placeholder: https://www.linkedin.com/in/alexandra-n-martinez/
+    validations:
+      required: true
+  - type: textarea
+    id: post-title
+    attributes:
+      label: Title
+      description: Please make sure you keep it under 100 characters.
+      placeholder: How to be an awesome developer
+      # value: "smt"
+    validations:
+      required: true
+  - type: textarea
+    id: post-desc
+    attributes:
+      label: Description
+      description: Write a summary of your article in a few sentences.
+      placeholder: Learn how to be the best developer with these 5 productivity tips...
+    validations:
+      required: true
+  - type: input
+    id: post-link
+    attributes:
+      label: Link to the article doc
+      description: Please provide the link to the full article in a Google Doc format.
+      placeholder: https://docs.google.com/document/d/1AgCoOaCA-jOOc2s1yjQS74zlmo/
+    validations:
+      required: true
+  # - type: dropdown
+  #   id: version
+  #   attributes:
+  #     label: Version
+  #     description: What version of our software are you running?
+  #     options:
+  #       - 1.0.2 (Default)
+  #       - 1.0.3 (Edge)
+  #   validations:
+  #     required: true
+  # - type: dropdown
+  #   id: browsers
+  #   attributes:
+  #     label: What browsers are you seeing the problem on?
+  #     multiple: true
+  #     options:
+  #       - Firefox
+  #       - Chrome
+  #       - Safari
+  #       - Microsoft Edge
+  # - type: textarea
+  #   id: logs
+  #   attributes:
+  #     label: Relevant log output
+  #     description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+  #     render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      description: Please make sure you are following all the standards before you submit your article.
+      options:
+        - label: Full article is in Google Docs
+          required: true
+        - label: Doc has been shared with alex@prostdev.com
+          required: true
+        - label: Title of the article is 100 chars or less
+          required: true
+        - label: Article is less than 1,500 words (give or take)
+          required: true
+        - label: Large code blocks have been provided as gist files
+          required: true
+        - label: Copy/pasted quotes, pictures, or any other content from external sites contain the appropriate links
+          required: true
+        - label: Article has been proofread using Grammarly (grammarly.com) and/or the Hemingway Editor (hemingwayapp.com)
+          required: true
+        - label: I confirm I'm not plagiarizing my content and it's 100% original
+          required: true
